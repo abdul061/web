@@ -17,7 +17,7 @@ const App = () => {
     <div>
       <Nav /> {/* Navigation component */}
 
-      <Routes>
+      <Routes basename ="/test_repo">
         <Route path="/" element={<Home />} /> {/* Home route */}
         <Route path="/about" element={<About />} /> {/* About route */}
         <Route path="/work" element={<Work />} />
