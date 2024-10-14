@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './Page/App';
-import About from './Page/About';
-import { MyProvider } from './Page/MyProvider';
+import App from './src/Page/App';
+import About from './src/Page/About';
+import { MyProvider } from './src/Page/MyProvider';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
