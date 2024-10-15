@@ -7,6 +7,7 @@ import Work from "./Work";
 import Footer from "./components/Footer";
 import Service from "./Service";
 import Contact from "./Contact";
+import { MyProvider } from "./MyProvider";
 
 // Import your Work component
 // Import your Services component
@@ -14,6 +15,7 @@ import Contact from "./Contact";
 
 const App = () => {
   return (
+    <MyProvider>
     <div>
       <Nav /> {/* Navigation component */}
 
@@ -26,6 +28,7 @@ const App = () => {
       </Routes>
       <Footer />
     </div>
+    </MyProvider>
   );
 };
 

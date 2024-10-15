@@ -1,44 +1,51 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
-  const [submitText, setSubmitText] = useState('Submit');
-  const [statusMessage, setStatusMessage] = useState('');
+  const [submitText, setSubmitText] = useState("Submit");
+  const [statusMessage, setStatusMessage] = useState("");
 
   // Handle input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitText('Sending...');
+    setSubmitText("Sending...");
     try {
       // Send form data to backend using the API URL from environment variables
-      await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
-      setSubmitText('Sent');
+      await axios.post(
+        `https://adiz-50022731878.development.catalystappsail.in/contact`,
+        formData
+      );
+      setSubmitText("Sent");
       // Clear the form after successful submission
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: "", email: "", message: "" });
 
       // Set a success message
-      window.alert('Thank you for contacting Adiz Codez! Kindly check your mail for more information!');
+      window.alert(
+        "Thank you for contacting Adiz Codez! Kindly check your mail for more information!"
+      );
     } catch (error) {
-      console.error('Error submitting the form:', error);
-      setStatusMessage('There was an error submitting your form. Please try again.');
+      console.error("Error submitting the form:", error);
+      setStatusMessage(
+        "There was an error submitting your form. Please try again."
+      );
     } finally {
       // After a short delay, reset the submit button text to 'Submit'
       setTimeout(() => {
-        setSubmitText('Submit');
-      }, 2000); 
+        setSubmitText("Submit");
+      }, 2000);
     }
   };
 
@@ -58,7 +65,10 @@ const Contact = () => {
               <div className="contact-form-heading-wrap">
                 <h2 className="contact-heading">Contact Us</h2>
                 <div className="paragraph-light">
-                  We’re ready to turn your ideas into reality. Whether you need assistance, want to collaborate, or seek more details about our services, don’t hesitate to get in touch. We’d love to hear from you.
+                  We’re ready to turn your ideas into reality. Whether you need
+                  assistance, want to collaborate, or seek more details about
+                  our services, don’t hesitate to get in touch. We’d love to
+                  hear from you.
                 </div>
               </div>
 
@@ -102,7 +112,7 @@ const Contact = () => {
                     type="submit"
                     className="primary-button w-button"
                     value={submitText}
-                    disabled={submitText === 'Sending...'}
+                    disabled={submitText === "Sending..."}
                   />
                 </form>
                 {statusMessage && (
@@ -116,13 +126,17 @@ const Contact = () => {
               <div className="details-wrap">
                 <div className="label">Our Offices</div>
                 <div className="paragraph-light">
-                  Our office is designed to inspire collaboration, innovation, and problem-solving. Whether you're visiting us for a meeting or collaborating remotely.
+                  Our office is designed to inspire collaboration, innovation,
+                  and problem-solving. Whether you're visiting us for a meeting
+                  or collaborating remotely.
                 </div>
               </div>
               <div className="details-wrap">
                 <div className="label">OUR OFFICE</div>
                 <div className="paragraph-light">
-                  Siva Sakthi Nagar,<br /> L.N Puram,<br /> Panruti
+                  Siva Sakthi Nagar,
+                  <br /> L.N Puram,
+                  <br /> Panruti
                 </div>
               </div>
               <div className="details-wrap">
@@ -131,7 +145,10 @@ const Contact = () => {
               </div>
               <div className="details-wrap">
                 <div className="label">CONTACT</div>
-                <a href="mailto:adizcodez@gmail.com" className="contact-email-link">
+                <a
+                  href="mailto:adizcodez@gmail.com"
+                  className="contact-email-link"
+                >
                   adizcodez@gmail.com
                 </a>
                 <div className="paragraph-light">+91 63852 97091</div>
@@ -149,10 +166,14 @@ const Contact = () => {
                   <strong>Best Solution is the simplest IDEA!</strong>
                 </div>
                 <div className="paragraph-bigger cc-bigger-light">
-                  At Adiz Codez, we blend technical skill with creative innovation to deliver an exceptional coding education.
+                  At Adiz Codez, we blend technical skill with creative
+                  innovation to deliver an exceptional coding education.
                 </div>
               </div>
-              <a href="/contact" className="primary-button cc-jumbo-button w-inline-block">
+              <a
+                href="/contact"
+                className="primary-button cc-jumbo-button w-inline-block"
+              >
                 <div>Start Now</div>
               </a>
             </div>
