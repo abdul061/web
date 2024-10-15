@@ -4,7 +4,7 @@ import App from './Page/App';
 import About from './Page/About';
 import { MyProvider } from './Page/MyProvider';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 
 const rootElement = document.getElementById('root');
