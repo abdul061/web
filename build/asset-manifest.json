@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/abdul061/front-end.git/static/js/main.a8bfd60b.js",
-    "index.html": "/abdul061/front-end.git/index.html",
-    "main.a8bfd60b.js.map": "/abdul061/front-end.git/static/js/main.a8bfd60b.js.map"
+    "main.js": "/abdul061/web.git/static/js/main.e99509de.js",
+    "index.html": "/abdul061/web.git/index.html",
+    "main.e99509de.js.map": "/abdul061/web.git/static/js/main.e99509de.js.map"
   },
   "entrypoints": [
-    "static/js/main.a8bfd60b.js"
+    "static/js/main.e99509de.js"
   ]
 }
